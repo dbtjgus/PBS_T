@@ -1,0 +1,5 @@
+runtime,#high-level expanded,#high-level generated,#low-level expanded,#low-level generated,solution cost,root g value,runtime of detecting conflicts,runtime of building constraint tables,runtime of building CATs,runtime of path finding,runtime of generating child nodes,preprocessing runtime,solver name,instance name
+0.053235,62,120,16110,34080,1168,1082,0.004511,0.0058,0.005591,0.038552,0.048359,0.006752,PBS with SIPP,random-32-32-20-random-1.scen
+0.139427,81,140,75917,78812,522,260,0.003017,0.018325,0.00589,0.12826,0.137913,0.000283,PBS with SIPP,post.scen
+0.02524,37,64,8989,14404,413,260,0.001174,0.003261,0.001419,0.020761,0.02391,0.000321,PBS with SIPP,post.scen
+0.055073,62,120,16110,34080,1168,1082,0.004429,0.005748,0.005733,0.039178,0.049046,0.009423,PBS with SIPP,random-32-32-20-random-1.scen
