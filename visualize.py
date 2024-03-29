@@ -17,7 +17,7 @@ Colors = ['orange', 'blue', 'green']
 
 
 class Animation:
-  def __init__(self, map, schedule):
+  def __init__(self, map, schedule, speed):
     self.map = map
     self.schedule = schedule
 
@@ -64,7 +64,7 @@ class Animation:
     self.anim = animation.FuncAnimation(self.fig, self.animate_func,
                                init_func=self.init_func,
                                frames=int(self.T+1) * 10,
-                               interval=100,
+                               interval= 10*speed,
                                blit=True)
   def save(self, file_name, speed):
     self.anim.save(
@@ -145,16 +145,10 @@ if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument("map", help="input file containing map")
   parser.add_argument("schedule", help="schedule for agents")
-  parser.add_argument('--video', dest='video', default=None, help="output video file (or leave empty to show on screen)")
-  parser.add_argument("--speed", type=int, default=20, help="speedup-factor")
+  parser.add_argument("--speed", type=int, default=1, help="speedup-factor")
   args = parser.parse_args()
 
   map = MapMOS(args.map)
   schedule = Schedule(args.schedule)
   
-  animation = Animation(map, schedule)
-
-  if args.video:
-    animation.save(args.video, args.speed)
-  else:
-    animation.show()
+  animation = Animation(map, schedule, args.speed)
