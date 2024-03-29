@@ -1,4 +1,9 @@
 ## Usage
+The code requires the external library [boost](https://www.boost.org/).
+If you are using Ubantu, you can install it simply by
+```shell script
+sudo apt install libboost-all-dev
+``` 
 After you installed boost and downloaded the source code, go into the directory of the source code and compile it with CMake:
 ```shell script
 cmake -DCMAKE_BUILD_TYPE=RELEASE .
