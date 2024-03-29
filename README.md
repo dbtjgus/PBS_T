@@ -31,3 +31,9 @@ To test the code on more instances,
 you can download the MAPF instances from the [MAPF benchmark](https://movingai.com/benchmarks/mapf/index.html).
 In particular, the format of the scen files is explained [here](https://movingai.com/benchmarks/formats.html).
 For a given number of agents k, the first k rows of the scen file are used to generate the k pairs of start and target locations.
+
+## Visualize
+
+```
+python3 visualize.py random-32-32-20.map paths.txt
+```
